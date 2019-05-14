@@ -14,6 +14,13 @@ pipeline {
 		mavenGoals = 'clean package'        
     }
     stages {
+	    
+	    stage('Checkout') {
+			steps {
+				scmFile()
+			}
+		}
+	    
 		stage('Build') {
 			steps {
 				buildFile()
