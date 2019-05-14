@@ -13,7 +13,7 @@ pipeline {
 		buildTool = 'maven_home'
 		mavenGoals = 'clean package'
 		artifactoryTool = 'artifactoryserver'
-		uploadArtifacts = '*Maven*.war'
+		uploadArtifacts = '*maven*.war'
 		uploadRepository = 'samplerepo/'
     }
     stages {
