@@ -9,7 +9,7 @@ pipeline {
 	environment {
         branch = 'master'
 		gitUrl = 'https://github.com/Nagagopi/maven-simple.git'
-		gitCredentials = 'Nagagopi'
+		gitCredentials = 'Nagagopi:horntail23'
 		buildTool = 'maven_home'
 		mavenGoals = 'clean package'        
     }
@@ -18,6 +18,11 @@ pipeline {
 	    stage('Checkout') {
 			steps {
 				scmFile(branch,gitUrl)
+			}
+		}
+	    stage('Build') {
+			steps {
+				buildFile()
 			}
 		}
 
