@@ -11,6 +11,7 @@ pipeline {
 		gitUrl = 'https://github.com/Nagagopi/maven-simple.git'
 		gitCredentials = ' '
 		buildTool = 'maven_home'
+		echo "${buildTool}"
 		mavenGoals = 'clean package'        
     }
     stages {
