@@ -12,9 +12,9 @@ pipeline {
 		gitCredentials = 'Nagagopi:horntail23'
 		buildTool = 'maven_home'
 		mavenGoals = 'clean package'
-		artifactoryTool = 'Artifactory'
+		artifactoryTool = 'artifactoryserver'
 		uploadArtifacts = '*Maven*.war'
-		uploadRepository = 'Sample/'
+		uploadRepository = 'samplerepo/'
     }
     stages {
 	    
@@ -30,7 +30,7 @@ pipeline {
 		}
 	    stage('Upload Artifacts') {
 			steps {
-				uploadArtifactory()
+				uploadArtifactory(artifactoryTool)
 			}
 		}
 
