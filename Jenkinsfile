@@ -17,7 +17,6 @@ pipeline {
 		uploadRepository = 'samplerepo/'
 		downloadArtifacts = 'samplerepo/*.jar'
 		downloadTarget = 'samplerepo/'
-		deploymentTarget = 'samplerepo\\maven.war'
 		publishJunit = 'target/surefire-reports/*.xml'
     }
     stages {
@@ -40,11 +39,6 @@ pipeline {
 	    stage('Download Artifacts') {
 			steps {
 				downloadArtifactory(artifactoryTool)
-			}
-		}
-	    stage('Deployment') {
-			steps {
-				deploymentFile()
 			}
 		}
 	    stage('Publish Junit Reports') {
