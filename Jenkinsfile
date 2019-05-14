@@ -15,6 +15,8 @@ pipeline {
 		artifactoryTool = 'artifactoryserver'
 		uploadArtifacts = '*maven*.jar'
 		uploadRepository = 'samplerepo/'
+		downloadArtifacts = 'samplerepo/*.jar'
+		downloadTarget = 'samplerepo/'
 		publishJunit = 'target/surefire-reports/*.xml'
     }
     stages {
@@ -32,6 +34,11 @@ pipeline {
 	    stage('Upload Artifacts') {
 			steps {
 				uploadArtifactory(artifactoryTool)
+			}
+		}
+	    stage('Download Artifacts') {
+			steps {
+				downloadArtifactory(artifactoryTool)
 			}
 		}
 	    stage('Publish Junit Reports') {
