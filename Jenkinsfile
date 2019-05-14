@@ -17,7 +17,7 @@ pipeline {
 	    
 	    stage('Checkout') {
 			steps {
-				scmFile()
+				scmFile(branch,gitUrl)
 			}
 		}
 
