@@ -8,7 +8,7 @@ pipeline {
 	}
 	environment {
         branch = 'master'
-		gitUrl = 'https://github.com/Nagagopi/maven-simple.git'
+		gitUrl = 'https:\\github.com\\Nagagopi\\maven-simple.git'
 		gitCredentials = ' '
 		buildTool = 'maven_home'
 		mavenGoals = 'clean package'        
