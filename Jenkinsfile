@@ -1,6 +1,6 @@
 @Library('pipeline-library-demo')_
 
-spipeline {
+pipeline {
     agent any
 	
 	options {
