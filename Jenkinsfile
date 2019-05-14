@@ -20,13 +20,6 @@ pipeline {
 				scmFile()
 			}
 		}
-	    
-		stage('Build') {
-			steps {
-				buildFile()
-			}
-		}
-		
 
 	}
 
