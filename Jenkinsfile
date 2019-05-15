@@ -10,6 +10,7 @@ pipeline {
         branch = 'master'
 		gitUrl = 'https://github.com/keerthiuppala/maven-project.git'	
 		buildTool = 'maven_home'
+		gitCredentials = ' '
 		mavenGoals = 'clean package'
 		artifactoryTool = 'artifactoryserver'
 		uploadArtifacts = '*maven*.jar'
