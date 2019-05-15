@@ -1,4 +1,4 @@
-@Library('pipeline-library-demo')_
+@Library('pipeline-library-v1.0')_
 
 pipeline {
     agent any
@@ -8,8 +8,7 @@ pipeline {
 	}
 	environment {
         branch = 'master'
-		gitUrl = 'https://github.com/Nagagopi/maven-simple.git'
-		gitCredentials = 'Nagagopi:horntail23'
+		gitUrl = 'https://github.com/keerthiuppala/maven-project.git'	
 		buildTool = 'maven_home'
 		mavenGoals = 'clean package'
 		artifactoryTool = 'artifactoryserver'
