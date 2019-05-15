@@ -2,5 +2,5 @@
 
 stage('kee')
 {
-main
+call()
 }
