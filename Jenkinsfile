@@ -1,11 +1,11 @@
 @Library('pipeline-library-v1.0')_
 pipeline{
-stage('main') {
+	agent any
+stages {
+	stage('main') {
 			steps {
 				main()
+				}
 			}
-		}
-  
-  
-
+	}
 }
