@@ -1,5 +1,11 @@
 @Library('pipeline-library-v1.0')_
-def call() 
-{
-  main()
+pipeline{
+stage('main') {
+			steps {
+				main()
+			}
+		}
+  
+  
+
 }
