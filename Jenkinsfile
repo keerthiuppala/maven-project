@@ -3,9 +3,7 @@
 node{
 stage('demo')
   {
-    steps{
-    main()
-    }
+    main()   
   }
 }
 
